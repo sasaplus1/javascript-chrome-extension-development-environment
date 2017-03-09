@@ -1,4 +1,4 @@
-# javascript-chrome-extension-environment
+# javascript-chrome-extension-development-environment
 
 my Chrome extension development environment
 
