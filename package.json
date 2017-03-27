@@ -23,6 +23,7 @@
     "chrome": "\"$(which-chrome Chrome)\"       $npm_package_config_chrome",
     "clean": "rimraf ./extension.crx ./extension.pem './userdata_*/*' './userdata_*/.!(gitkeep)'",
     "export": "git archive HEAD | tar x - -C",
-    "fixpack": "fixpack"
+    "fixpack": "fixpack",
+    "zip": "zip -r ./extension.zip ./extension/*"
   }
 }
