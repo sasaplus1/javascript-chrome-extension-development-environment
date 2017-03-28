@@ -5,7 +5,9 @@
     "build-first:canary": "--pack-extension=./extension",
     "build-first:chrome": "--pack-extension=./extension",
     "canary": "--user-data-dir=./userdata_canary --disable-default-apps --disable-translate --no-default-browser-check --no-first-run",
-    "chrome": "--user-data-dir=./userdata_chrome --disable-default-apps --disable-translate --no-default-browser-check --no-first-run"
+    "chrome": "--user-data-dir=./userdata_chrome --disable-default-apps --disable-translate --no-default-browser-check --no-first-run",
+    "develop:canary": "--user-data-dir=./userdata_canary --load-extension=./extension --disable-default-apps --disable-translate --no-default-browser-check --no-first-run",
+    "develop:chrome": "--user-data-dir=./userdata_chrome --load-extension=./extension --disable-default-apps --disable-translate --no-default-browser-check --no-first-run"
   },
   "devDependencies": {
     "fixpack": "^2.3.1",
@@ -22,6 +24,8 @@
     "canary": "\"$(which-chrome ChromeCanary)\" $npm_package_config_canary",
     "chrome": "\"$(which-chrome Chrome)\"       $npm_package_config_chrome",
     "clean": "rimraf ./extension.crx ./extension.pem './userdata_*/*' './userdata_*/.!(gitkeep)'",
+    "develop:canary": "\"$(which-chrome ChromeCanary)\" $npm_package_config_develop_canary",
+    "develop:chrome": "\"$(which-chrome Chrome)\"       $npm_package_config_develop_chrome",
     "export": "git archive HEAD | tar x - -C",
     "fixpack": "fixpack",
     "zip": "zip -r ./extension.zip ./extension/*"
