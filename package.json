@@ -28,6 +28,6 @@
     "exec:chrome": "\"$(which-chrome Chrome)\"       $npm_package_config_exec_chrome",
     "export": "git archive HEAD | tar x - -C",
     "fixpack": "fixpack",
-    "zip": "zip -r ./extension.zip ./extension/*"
+    "zip": "rimraf ./extension.zip && (cd ./extension && zip -r ../extension.zip ./*)"
   }
 }
