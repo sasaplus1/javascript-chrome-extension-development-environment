@@ -1,5 +1,8 @@
 *.pem
 
+extension.crx
+extension.zip
+
 userdata_canary/*
 !userdata_canary/.gitkeep
 
