@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "build": "\"$(which-chrome Chrome)\" --pack-extension=./ext --pack-extension-key=./ext.pem || \"$(which-chrome Chrome)\" --pack-extension=./ext",
-    "chrome": "\"$(which-chrome Chrome)\" --user-data-dir=./userdata_chrome --load-extension=./ext --disable-default-apps --disable-translate --no-default-browser-check --no-first-run",
+    "chrome": "\"$(which-chrome Chrome)\" --user-data-dir=./env --load-extension=./ext --disable-default-apps --disable-translate --no-default-browser-check --no-first-run",
     "compile": "npm run webpack",
     "develop": "npm run webpack -- --devtool inline-source-map --watch",
     "eslint": "eslint",
