@@ -1,8 +1,16 @@
 {
+  "name": "extension",
+  "description": "test extension",
+  "version": "0.0.0",
+  "author": "sasa+1",
   "devDependencies": {
+    "extract-text-webpack-plugin": "^2.1.0",
     "fixpack": "^2.3.1",
     "karma-chrome-launcher": "^2.0.0",
+    "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
+    "val-loader": "^1.0.2",
+    "webpack": "^2.3.3",
     "which-chrome": "^0.1.0"
   },
   "private": true,

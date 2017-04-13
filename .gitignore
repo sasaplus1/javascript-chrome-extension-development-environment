@@ -3,6 +3,9 @@
 ext.crx
 ext.zip
 
+ext/*
+!ext/.gitkeep
+
 env/*
 !env/.gitkeep
 
