@@ -1,7 +1,7 @@
 *.pem
 
-extension.crx
-extension.zip
+ext.crx
+ext.zip
 
 env/*
 !env/.gitkeep
