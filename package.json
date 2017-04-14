@@ -18,6 +18,7 @@
   "scripts": {
     "build": "\"$(which-chrome Chrome)\" --pack-extension=./ext --pack-extension-key=./ext.pem || \"$(which-chrome Chrome)\" --pack-extension=./ext",
     "chrome": "\"$(which-chrome Chrome)\" --user-data-dir=./env --load-extension=./ext --disable-default-apps --disable-translate --no-default-browser-check --no-first-run",
+    "clean": "rimraf './ext/**/*'",
     "compile": "npm run webpack",
     "copy": "cpr -f '\\.js$' ./src ./ext",
     "develop": "npm run webpack -- --devtool inline-source-map --watch",
