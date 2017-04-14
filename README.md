@@ -2,6 +2,77 @@
 
 my Chrome extension development environment
 
+## Setup
+
+export template to target directory:
+
+```sh
+$ npm run export -- /path/to/dir
+```
+
+install dependencies:
+
+```sh
+$ cd /path/to/dir
+$ npm install
+```
+
+## npm-scripts
+
+### develop
+
+develop extension:
+
+```sh
+$ npm run develop
+```
+
+execute webpack with `--watch` option.
+
+### chrome
+
+execute Google Chrome with new profile:
+
+```sh
+$ npm run chrome
+```
+
+profile data is save to `env` directory.
+
+### build
+
+generate crx file:
+
+```sh
+$ npm run build
+```
+
+### release
+
+generate release file for Chrome Web Store:
+
+```sh
+$ npm run release
+```
+
+### lint
+
+lint with eslint:
+
+```sh
+$ npm run lint
+```
+
+### clean
+
+remove generated files:
+
+```sh
+$ npm run clean
+```
+
+if you want more info, see `package.json`.
+
 ## See also
 
 - [List of Chromium Command Line Switches](http://peter.sh/experiments/chromium-command-line-switches/)
