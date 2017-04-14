@@ -15,15 +15,15 @@ module.exports = function() {
 
     description,
     icons: {
-      '128': '128.png',
+      '128': 'assets/icons/128.png',
     },
 
     browser_action: {
       default_title: name,
       default_icon: {
-        '16': '128.png',
-        '24': '128.png',
-        '32': '128.png',
+        '16': 'assets/icons/128.png',
+        '24': 'assets/icons/128.png',
+        '32': 'assets/icons/128.png',
       },
       default_popup: 'popup.html',
     },
