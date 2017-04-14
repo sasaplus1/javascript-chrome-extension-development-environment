@@ -37,5 +37,20 @@ module.exports = function(env) {
         new ExtractTextPlugin('manifest.json'),
       ],
     }),
+    Object.assign({}, baseConfig, {
+      entry: {
+        'background': `${__dirname}/src/background.js`,
+        'content_script': `${__dirname}/src/content_script.js`,
+        'popup': `${__dirname}/src/popup.js`,
+        'web_accessible_resource': `${__dirname}/src/web_accessible_resource.js`,
+      },
+      output: {
+        chunkFilename: 'chunk-[id]-[hash].js',
+        filename: '[name].js',
+        path: `${__dirname}/ext/`,
+        publicPath: './',
+      },
+      target: 'web',
+    }),
   ];
 };
