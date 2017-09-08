@@ -32,7 +32,7 @@
     "chrome": "\"$(which-chrome Chrome)\" --user-data-dir=./env --load-extension=./ext --disable-default-apps --disable-translate --no-default-browser-check --no-first-run",
     "clean": "rimraf './ext/**/*'",
     "compile": "npm run webpack",
-    "copy": "cpr -f '\\.js$' ./src ./ext",
+    "copy": "cpr ./src ./ext --filter '\\.js$' --overwrite",
     "develop": "npm run webpack -- --devtool inline-source-map --watch",
     "eslint": "eslint",
     "export": "git archive --worktree-attributes HEAD | tar x - -C",
