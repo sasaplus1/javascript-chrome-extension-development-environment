@@ -1,6 +1,7 @@
 'use strict';
 
-const webpack = require('webpack');
+const deepcopy = require('deepcopy'),
+      webpack = require('webpack');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -10,7 +11,7 @@ module.exports = function(env) {
   };
 
   return [
-    Object.assign({}, baseConfig, {
+    Object.assign({}, deepcopy(baseConfig), {
       entry: {
         'manifest': `${__dirname}/src/manifest.js`
       },
@@ -37,7 +38,7 @@ module.exports = function(env) {
         new ExtractTextPlugin('manifest.json'),
       ],
     }),
-    Object.assign({}, baseConfig, {
+    Object.assign({}, deepcopy(baseConfig), {
       entry: {
         'background': `${__dirname}/src/background.js`,
         'content_script': `${__dirname}/src/content_script.js`,
